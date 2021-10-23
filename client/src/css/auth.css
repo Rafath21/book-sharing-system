@@ -1,0 +1,68 @@
+* {
+  font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+}
+h1 {
+  color: #0f3778c7;
+}
+
+.register-form-container,
+.login-form-container {
+  position: absolute;
+  top: 4%;
+  width: 30%;
+  left: 35%;
+}
+.form-container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.email-input,
+.password-input,
+.name-input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 15px;
+}
+.email-input:focus,
+.password-input:focus,
+.name-input:focus {
+  background-color: #ddd;
+  border: 2px solid #001b48;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn,
+.loginbtn,
+.login-with-google {
+  background: #f57316; /* fallback for old browsers */
+  color: white;
+  padding: 16px 20px;
+  margin: 10px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover,
+.loginbtn:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 800px) {
+  .register-form-container,
+  .login-form-container {
+    width: 70vw;
+    left: 10%;
+  }
+}
