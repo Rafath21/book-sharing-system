@@ -6,7 +6,7 @@ export const getBooks=()=>async(dispatch)=>{
         dispatch({
             type:HOME_BOOKS_REQUEST
         })
-        const {data}=await axios.get("http://localhost:8000/api/v1/home");
+        const {data}=await axios.get("/api/v1/home");
         dispatch({
             type:HOME_BOOKS_SUCCESS,
             payload:data,

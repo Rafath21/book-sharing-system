@@ -13,14 +13,8 @@ app.use(bodyParser({limit: '50mb'}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(fileUpload());
 app.use(express.json())
-//app.use(cors());
-//app.use(cors({origin:'*'}));
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
-/*app.use(function(req, res, next) {  
-      res.header('Access-Control-Allow-Origin', req.headers.origin);
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-      next();
- });*/
+
 connectDB();
 
 cloudinary.config({

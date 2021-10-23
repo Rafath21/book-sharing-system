@@ -35,7 +35,7 @@ export const sellBook=(id,bookname,bookprice,bookImg,shipsTo,cardno)=>async(disp
         await axios({
             method: 'post',
             withCredentials: true,
-            url: `http://localhost:8000/api/v1/sell/${id}`,
+            url: `/api/v1/sell/${id}`,
             data: {
                     img: bookImg,
                     price: bookprice,

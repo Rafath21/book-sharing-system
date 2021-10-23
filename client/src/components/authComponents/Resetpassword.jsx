@@ -24,15 +24,11 @@ const ResetPassword = () => {
     try {
       let { data } = await axios({
         method: "PUT",
-        url: `http://localhost:8000/api/v1/auth/passwordreset/${resetToken}`,
+        url: `/api/v1/auth/passwordreset/${resetToken}`,
         withCredentials: true,
         data: {
           password: password,
-        },
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
+        }
       });
       history.push("/login");
     } catch (error) {

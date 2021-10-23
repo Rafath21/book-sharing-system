@@ -9,7 +9,7 @@ export const bought=(id)=>async(dispatch)=>{
         })
         let {data}=await axios({
                         method: 'get',
-                        url: `http://localhost:8000/api/v1/boughtstatus/${id}`
+                        url: `/api/v1/boughtstatus/${id}`
         })
         dispatch({type:GET_BOUGHT_STATUS_SUCCESS,payload:data})
     }catch(err){

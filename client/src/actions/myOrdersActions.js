@@ -10,7 +10,7 @@ export const myOrders=(username)=>async(dispatch)=>{
         let {data}=await axios({
                         method: 'get',
                        withCredentials: true,
-                        url: `http://localhost:8000/api/v1/orders/${username}`
+                        url: `/api/v1/orders/${username}`
         })
         dispatch({type:GET_MY_ORDERS_SUCCESS,payload:data.orders})
     

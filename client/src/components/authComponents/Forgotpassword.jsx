@@ -13,7 +13,7 @@ const ForgotPasswordScreen = () => {
     try {
       let { data } = await axios({
         method: "POST",
-        url: `http://localhost:8000/api/v1/auth/forgotpassword`,
+        url: `/api/v1/auth/forgotpassword`,
         withCredentials: true,
         data: {
           email: email,

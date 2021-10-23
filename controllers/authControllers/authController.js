@@ -26,6 +26,19 @@ exports.register=async(req,res,next)=>{
             password,
         });
         sendToken(user,200,res);
+        const message1=`A new user ${username} just signed up on the Book-Sharing App `
+        const message2=`Hi ${username}! Glad that you signed up. Hope you enjoy the App experience. Please leave
+        a feedback if you do.`
+        sendEmail({
+            to:process.env.EMAIL_USER,
+            subject:"New User Signed up!",
+            message:message1
+        })
+        sendEmail({
+            to:email,
+            subject:"ThankYou for signing up!",
+            message:message2
+        })
     }catch(err){
         next(err);
     }

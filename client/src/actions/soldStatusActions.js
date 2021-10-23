@@ -9,7 +9,7 @@ export const sold=(id)=>async(dispatch)=>{
         })
         let {data}=await axios({
                         method: 'get',
-                        url: `http://localhost:8000/api/v1/soldstatus/${id}`,
+                        url: `/api/v1/soldstatus/${id}`,
                         withCredentials: true,
         })
         dispatch({type:GET_SOLD_STATUS_SUCCESS,payload:data})
@@ -25,7 +25,7 @@ export const orderUpdate=(id,orderStatus)=>async(dispatch)=>{
         })
         let {data}=await axios({
             method: 'PUT',
-                        url: `http://localhost:8000/api/v1/soldstatus/${id}`,
+                        url: `/api/v1/soldstatus/${id}`,
                         data:{
                             OrderStatus:orderStatus
                         },

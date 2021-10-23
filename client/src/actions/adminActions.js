@@ -10,7 +10,7 @@ export const getallBooks=()=>async(dispatch)=>{
         })
          const {data}=await axios({
                         method: 'GET',
-                        url: "http://localhost:8000/api/v1/allbooks",
+                        url: "/api/v1/allbooks",
                         withCredentials: true
         })
         dispatch({
@@ -36,7 +36,7 @@ export const getallUsers=()=>async(dispatch)=>{
         })
          const {data}=await axios({
                         method: 'GET',
-                        url: "http://localhost:8000/api/v1/allusers",
+                        url: "/api/v1/allusers",
                         withCredentials: true
       
         })
@@ -59,7 +59,7 @@ export const getallOrders=()=>async(dispatch)=>{
         })
          const {data}=await axios({
                         method: 'GET',
-                        url: "http://localhost:8000/api/v1/allorders",
+                        url: "/api/v1/allorders",
                         withCredentials: true
         })
         dispatch({

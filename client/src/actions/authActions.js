@@ -6,7 +6,7 @@ export const login=(email,password)=>async(dispatch)=>{
         dispatch({type:LOGIN_REQUEST});
         const {data}=await axios({
                         method: 'POST',
-                        url: `http://localhost:8000/api/v1/auth/login`,
+                        url: `/api/v1/auth/login`,
                    withCredentials: true,
                         data:{
                             email:email,
@@ -25,7 +25,7 @@ try{
         dispatch({type:REGISTER_USER_REQUEST});
         const {data}=await axios({
                         method: 'POST',
-                        url: "http://localhost:8000/api/v1/auth/register",
+                        url: "/api/v1/auth/register",
                         data:{
                             username:username,
                             email:email,
@@ -44,7 +44,7 @@ try{
 export const logout=()=>async(dispatch)=>{
     try{
         dispatch({type:LOGOUT_REQUEST})
-        await axios.get("http://localhost:8000/api/v1/auth/logout");
+        await axios.get("/api/v1/auth/logout");
     
         window.localStorage.removeItem("user");
         dispatch({type:LOGOUT_SUCCESS});

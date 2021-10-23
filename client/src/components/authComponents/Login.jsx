@@ -8,7 +8,7 @@ let Login = () => {
   let dispatch = useDispatch();
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
-  const { error, loading, isAuthenticated } = useSelector(
+  const { error, loading, isAuthenticated, user } = useSelector(
     (state) => state.user
   );
   useEffect(() => {
@@ -17,7 +17,7 @@ let Login = () => {
       dispatch(clearErrors());
     }
 
-    if (isAuthenticated) {
+    if (user != null) {
       history.push("/");
     }
   }, [dispatch, error, history, isAuthenticated]);

@@ -26,7 +26,7 @@ const AllUsers = () => {
             userid: user._id,
           },
           withCredentials: true,
-          url: "http://localhost:8000/api/v1/allusers",
+          url: "/api/v1/allusers",
         }).then(() => {
           setIsUpdated(true);
         });
@@ -54,7 +54,7 @@ const AllUsers = () => {
             role: UserRole,
           },
           withCredentials: true,
-          url: "http://localhost:8000/api/v1/allusers",
+          url: "/api/v1/allusers",
         }).then(() => {
           setIsUpdated(true);
         });

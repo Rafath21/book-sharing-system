@@ -29,12 +29,9 @@ const Payment = () => {
     try {
       const { data } = await axios({
         method: "POST",
-        url: "http://localhost:8000/api/v1/payment/process",
+        url: "/api/v1/payment/process",
         withCredentials: true,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
+
         data: {
           amount: paymentData.amount,
           id: orderid,
