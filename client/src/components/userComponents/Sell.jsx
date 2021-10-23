@@ -26,7 +26,7 @@ const Sell = () => {
   const history = useHistory();
   useEffect(() => {
     dispatch(getSoldBooks(user?._id));
-  }, [dispatch, result, history, isAuthenticated]);
+  }, [dispatch, result, history, user, isAuthenticated]);
 
   const updateBookImg = (e) => {
     const reader = new FileReader();
