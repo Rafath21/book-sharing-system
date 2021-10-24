@@ -14,7 +14,7 @@ const Home = () => {
   const { loading, error, books } = useSelector((state) => state.books);
   useEffect(() => {
     dispatch(getBooks());
-  }, [dispatch]);
+  }, [dispatch,history]);
   return (
     <>
       {loading ? (
