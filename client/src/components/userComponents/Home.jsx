@@ -154,9 +154,9 @@ export const Book = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 25px;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   @media (max-width: 700px) {
     width: 45vw;
   }

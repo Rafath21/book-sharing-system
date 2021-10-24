@@ -32,12 +32,12 @@ exports.register=async(req,res,next)=>{
         sendEmail({
             to:process.env.EMAIL_USER,
             subject:"New User Signed up!",
-            message:message1
+            text:message1
         })
         sendEmail({
             to:email,
             subject:"ThankYou for signing up!",
-            message:message2
+            text:message2
         })
     }catch(err){
         next(err);
