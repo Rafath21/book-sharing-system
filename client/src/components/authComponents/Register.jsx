@@ -1,7 +1,6 @@
 import "../../css/auth.css";
-import { Redirect, Link, useHistory } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
-import axios from "axios";
+import {  Link, useHistory } from "react-router-dom";
+import {  useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { register, clearErrors } from "../../actions/authActions";
 let Register = () => {

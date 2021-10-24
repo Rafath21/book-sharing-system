@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getallOrders } from "../../actions/adminActions";
-import { Section, Element, Delete } from "./AllUsers";
+import { Section, Element } from "./AllUsers";
 import { useEffect } from "react";
 const AllOrders = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const AllOrders = () => {
     <Section>
       <h1>All Orders on BookSharing app:</h1>
       {allorders &&
-        allorders.map((order,index) => {
+        allorders.map((order, index) => {
           return (
             <Element key={index}>
               <h4>Book name:</h4>

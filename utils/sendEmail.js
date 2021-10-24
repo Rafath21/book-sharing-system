@@ -12,7 +12,7 @@ const sendEmail=(options)=>{
       }
     })
     const mailOptions={
-        from: '"Bookstore app 📔"<rafathsweb@gmail.com>',
+        from: '"Book-sharing app 📔"<rafathsweb@gmail.com>',
         to:options.to,
         subject:options.subject,
         html:options.text,

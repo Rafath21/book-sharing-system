@@ -1,6 +1,6 @@
 import "../../css/auth.css";
-import { Redirect, Link, useHistory } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { login, clearErrors } from "../../actions/authActions";
 let Login = () => {
@@ -8,9 +8,7 @@ let Login = () => {
   let dispatch = useDispatch();
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
-  const { error, loading, isAuthenticated, user } = useSelector(
-    (state) => state.user
-  );
+  const { error, isAuthenticated, user } = useSelector((state) => state.user);
   useEffect(() => {
     if (error) {
       alert(error);
