@@ -11,7 +11,7 @@ export const getSoldBooks=(id)=>async(dispatch)=>{
         const {data}=await axios({
             method:"GET",
             withCredentials: true,
-            url:`http://localhost:8000/api/v1/sell/${id}`,
+            url:`/api/v1/sell/${id}`,
            
         });
         dispatch({

@@ -32,7 +32,7 @@ const Home = () => {
             ></Logo>
             <NavItem
               onClick={() => {
-                if (user==null) {
+                if (user == null) {
                   history.push("/login");
                 } else {
                   history.push(`/sell/${user._id}`);
@@ -92,7 +92,7 @@ const Home = () => {
                     <BookInfo>$ {book.price}</BookInfo>
                     <BuynowBtn
                       onClick={() => {
-                        if (user==null) {
+                        if (user == null) {
                           history.push("/login");
                         } else {
                           history.push({

@@ -1,5 +1,6 @@
 const express=require('express');
 const app=express();
+require("dotenv").config({ path: "./config.env" });
 const cloudinary=require("cloudinary");
 //const cors=require("cors");
 const bodyParser=require("body-parser");
@@ -8,6 +9,7 @@ const cookieParser = require("cookie-parser");
 const connectDB=require('./config/db');
 const path=require("path");
 const PORT=process.env.PORT;
+
 app.use(cookieParser());
 app.use(bodyParser({limit: '50mb'}));
 app.use(bodyParser.urlencoded({extended:true}));

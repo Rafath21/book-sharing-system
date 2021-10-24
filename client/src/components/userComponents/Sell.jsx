@@ -25,7 +25,7 @@ const Sell = () => {
   const { user, isAuthenticated } = useSelector((state) => state.user);
   const history = useHistory();
   useEffect(() => {
-    dispatch(getSoldBooks(user?._id));
+    dispatch(getSoldBooks(user._id));
   }, [dispatch, result, history, user, isAuthenticated]);
 
   const updateBookImg = (e) => {
