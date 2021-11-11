@@ -25,7 +25,9 @@ function App() {
 const stripeApiKey="pk_test_51Ja1UGSFkqJZGOrfsOxNfWt7p6hlf0Ugfp50OLXBWRRcnJUimj4S7vWpc8laOqPeEs0pi4XZFvDnjsAD1PIx2D9d00r5KO6AV8";
 
  useEffect(()=>{
+        if(window.localStorage.getItem("user")){
         dispatch({type:LOGIN_SUCCESS,payload:JSON.parse(window.localStorage.getItem("user"))});
+        }
   },[])
   return (
     <>
