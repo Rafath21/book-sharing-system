@@ -1,6 +1,6 @@
 import "../../css/auth.css";
-import {  Link, useHistory } from "react-router-dom";
-import {  useState, useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { register, clearErrors } from "../../actions/authActions";
 let Register = () => {
@@ -13,7 +13,6 @@ let Register = () => {
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
-
 
   async function handleRegister(e) {
     if (password != confirmPassword) {
@@ -28,7 +27,7 @@ let Register = () => {
       dispatch(clearErrors());
     }
 
-    if (isAuthenticated) {
+    if (user != null) {
       history.push("/");
     }
   }, [dispatch, error, history, isAuthenticated]);
