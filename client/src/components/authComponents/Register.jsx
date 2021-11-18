@@ -10,7 +10,7 @@ let Register = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [confirmPassword, setconfirmPassword] = useState("");
-  const { error, loading, isAuthenticated } = useSelector(
+  const { error, loading, isAuthenticated, user } = useSelector(
     (state) => state.user
   );
 
