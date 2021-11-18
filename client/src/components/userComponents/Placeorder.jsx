@@ -20,7 +20,12 @@ const Placeorder = () => {
   let history = useHistory();
   let bookid = location.state.bookid;
   let state = location.state;
-
+  useEffect(() => {
+    if (state.booksoldby == user.username) {
+      alert("You cannot buy your own book");
+      history.push("/");
+    }
+  }, []);
   const order = () => {
     if (isNaN(pincode)) {
       alert("Pincode is invalid!");
