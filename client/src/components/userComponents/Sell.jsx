@@ -42,6 +42,13 @@ const Sell = () => {
   const sell = (e) => {
     if ((price > 999, 999.99)) {
       alert("Amount must be no more than $999,999.99");
+    } else if (
+      bookname == "" ||
+      bookImg == "" ||
+      shipsTo == "" ||
+      cardno == ""
+    ) {
+      alert("Plese fill all the fields");
     } else {
       dispatch(sellBook(user._id, bookname, price, bookImg, shipsTo, cardno));
       setsellBoxOpen(false);

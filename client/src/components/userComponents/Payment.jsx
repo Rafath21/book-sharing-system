@@ -92,7 +92,10 @@ const Payment = () => {
           your payment will still be successful if you don't give valid card
           details.
         </p>
-        <p>The purpose is only to demonstrate stripe integration in the app.</p>
+        <p>
+          The purpose is only to demonstrate stripe frontend integration in the
+          app.
+        </p>
       </PaymentContainer>
     </>
   );
