@@ -40,8 +40,12 @@ const Sell = () => {
     reader.readAsDataURL(e.target.files[0]);
   };
   const sell = (e) => {
-    dispatch(sellBook(user._id, bookname, price, bookImg, shipsTo, cardno));
-    setsellBoxOpen(false);
+    if ((price > 999, 999.99)) {
+      alert("Amount must be no more than $999,999.99");
+    } else {
+      dispatch(sellBook(user._id, bookname, price, bookImg, shipsTo, cardno));
+      setsellBoxOpen(false);
+    }
   };
   return (
     <>

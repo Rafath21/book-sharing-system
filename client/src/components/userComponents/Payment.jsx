@@ -87,6 +87,12 @@ const Payment = () => {
             }}
           />
         </PaymentForm>
+        <p>Since it's a portfolio project with no real users,</p>
+        <p>
+          your payment will still be successful if you don't give valid card
+          details.
+        </p>
+        <p>The purpose is only to demonstrate stripe integration in the app.</p>
       </PaymentContainer>
     </>
   );
