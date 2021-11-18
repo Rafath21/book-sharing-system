@@ -40,23 +40,24 @@ const Payment = () => {
 
       const client_secret = data.client_secret;
 
-      if (!stripe || !elements) return;
-
-      const result = await stripe
-        .confirmCardPayment(client_secret, {
-          payment_method: {
-            card: elements.getElement(CardNumberElement),
-            billing_details: {
-              name: user.name,
-              email: user.email,
+      if (!stripe || !elements) alert("Please enter correct information");
+      else {
+        const result = await stripe
+          .confirmCardPayment(client_secret, {
+            payment_method: {
+              card: elements.getElement(CardNumberElement),
+              billing_details: {
+                name: user.name,
+                email: user.email,
+              },
             },
-          },
-        })
-        .then(() => {
-          setSucceeded(true);
-          alert("Your payment was successful!");
-          history.push("/");
-        });
+          })
+          .then(() => {
+            setSucceeded(true);
+            alert("Your payment was successful!");
+            history.push("/");
+          });
+      }
     } catch (error) {
       alert(error.response.data.message);
     }
