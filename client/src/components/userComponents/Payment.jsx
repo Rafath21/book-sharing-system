@@ -65,6 +65,11 @@ const Payment = () => {
   return (
     <>
       <PaymentContainer>
+        <p>
+          We suggest you to only make the payment after<br></br>
+          receiving an email saying that your order has been <br></br>
+          accepted by the seller.
+        </p>
         <PaymentForm>
           <h1>Card Info</h1>
           <div>
