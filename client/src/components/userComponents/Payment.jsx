@@ -92,9 +92,9 @@ const Payment = () => {
             }}
           />
         </PaymentForm>
-        <p>Since it's a portfolio project with no real users,</p>
         <p>
-          please do not enter your personal credit card details.<b></b>
+          Since it's a portfolio project with no real users,<br></br>
+          please do not enter your personal credit card details.<br></br>
           Instead, you can enter "424242..." right from the card number to cvv.
         </p>
       </PaymentContainer>
