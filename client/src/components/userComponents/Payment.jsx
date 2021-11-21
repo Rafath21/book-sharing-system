@@ -89,12 +89,8 @@ const Payment = () => {
         </PaymentForm>
         <p>Since it's a portfolio project with no real users,</p>
         <p>
-          your payment will still be successful if you don't give valid card
-          details.
-        </p>
-        <p>
-          The purpose is only to demonstrate stripe frontend integration in the
-          app.
+          please do not enter your personal credit card details.<b></b>
+          Instead, you can enter "424242..." right from the card number to cvv.
         </p>
       </PaymentContainer>
     </>
