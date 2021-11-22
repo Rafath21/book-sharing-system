@@ -84,7 +84,6 @@ const Container = styled.div`
 const Heading = styled.p`
   font-size: 2rem;
   font-weight: bold;
-  text-decoration: underline;
 `;
 const Items = styled.div`
   flex-grow: 0.8;
