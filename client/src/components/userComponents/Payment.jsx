@@ -26,40 +26,41 @@ const Payment = () => {
     amount: Math.round(totalPrice * 100),
   };
   const submitHandler = async () => {
-    const client_secret = data.client_secret;
-    if (!stripe || !elements) alert("Please enter correct information");
-    else {
-      const { error } = await stripe.confirmCardPayment(client_secret, {
-        payment_method: {
-          card: elements.getElement(CardNumberElement),
-          billing_details: {
-            name: user.name,
-            email: user.email,
-          },
+    try {
+      const { data } = await axios({
+        method: "POST",
+        url: "/api/v1/payment/process",
+        withCredentials: true,
+
+        data: {
+          amount: paymentData.amount,
+          id: orderid,
         },
       });
-      if (error.type === "card_error" || error.type === "validation_error") {
-        alert(error.message);
-      } else {
-        try {
-          const { data } = axios({
-            method: "POST",
-            url: "/api/v1/payment/process",
-            withCredentials: true,
 
-            data: {
-              amount: paymentData.amount,
-              id: orderid,
+      const client_secret = data.client_secret;
+
+      if (!stripe || !elements) return;
+      else {
+        const result = await stripe
+          .confirmCardPayment(client_secret, {
+            payment_method: {
+              card: elements.getElement(CardNumberElement),
+              billing_details: {
+                name: user.name,
+                email: user.email,
+              },
             },
-          }).then(() => {
+          })
+          .then(() => {
             setSucceeded(true);
             alert("Your payment was successful!");
             history.push("/");
           });
-        } catch (error) {
-          alert("Something went wrong!");
-        }
       }
+    } catch (error) {
+      payBtn.current.value = `Pay - $ ${totalPrice}`;
+      alert("Something went wrong!");
     }
   };
   return (
